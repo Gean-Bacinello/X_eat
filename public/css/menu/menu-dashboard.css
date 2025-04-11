@@ -1,0 +1,109 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body{
+    /* antes height: 900vh */
+    height: 100%;
+}
+
+/* Menu lateral fechado */
+nav.menu_lateral {
+    width: 80px;
+    height: 100vh;
+    background-color: #2F4050;
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 #1AB394;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: width 0.5s ease;
+}
+
+/* Menu expandido */
+nav.menu_lateral.expandir {
+    /* antes 300px */
+    width: 220px;
+}
+
+.btn_expandir{
+    width: 100%;
+    padding-left: 10px;
+}
+
+.btn_expandir > i{
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+ul{
+    height: 100%;
+    list-style: none;
+}
+
+ul li.item_menu{
+    transition: .2s;
+    border-radius: 10px 0px 0px 10px;
+}
+
+ul li.ativo{
+    background-color: #1AB394;
+}
+
+ul li.item_menu:hover{
+    background-color:  #1AB394;
+ 
+}
+
+ul li.item_menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    margin-bottom: 30px;
+    line-height: 40px;
+}
+
+ul li.item_menu a .txt-link{
+    margin-left: 40px;
+    transition: 1s;
+    opacity: 0;
+}
+
+nav.menu_lateral.expandir .txt-link{
+    /* margin-left: 70px; */
+
+    opacity: 1;
+}
+
+ul li.item_menu a .icon > i{
+    font-size: 30px;
+    margin-left: 5px;
+}
+
+
+
+/* Alterado  */
+main {
+    background-color: #ECE9E6;
+    height: 100vh;
+    margin-left: 80px; /* espaço padrão quando menu está recolhido */
+    transition: margin-left 0.5s;
+    padding: 40px;
+}
+
+main.expandido {
+    margin-left: 220px; /* mesmo valor do menu expandido */
+    /* antes 300px */
+
+}

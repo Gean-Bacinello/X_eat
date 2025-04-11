@@ -1,0 +1,207 @@
+/* 
+    Nome do Arquivo: home.css
+    Autor: Gean Correa Bacinello
+    Data de criação: 15/02/2025
+    Última modificação: 17/02/2025
+    Descrição: Estilos gerais para a aplicação.
+    
+    Histórico de alterações:
+    - [15/02/2025] (Gean) Criado o arquivo e definido estilos básicos.
+    - [16/02/2025] (Gean) Ajustado espaçamento da navbar.
+    - [17/02/2025] (Gean) Alterado o tamanho da fonte do título principal.
+
+*/
+
+
+/*          Cores Padrão
+
+    CORPO:     #ECE9E6;
+  CABEÇALHO:   #8ead46b3;
+               #1D976C;
+    OUTROS:    #00F5A0;
+               #00D9F5;
+               #AFC2B1;
+               #2F4050
+
+
+*/
+
+body{
+    background-color: #ECE9E6;
+    font-family: "Poppins, sans-serif, ";
+    font-size: 16px;
+}
+
+main{ display: flex;
+    justify-content: center;
+    align-items: center;
+     /* ver como posso arrumar a altura da main em dispositos menores */
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 65px;
+    background-color: #2F4050;
+    justify-content: space-between; /* Alinha logo à esquerda e navegação à direita */
+    align-items: center;
+   /* padding: 0 20px;  Adiciona um espaçamento nas laterais */
+}
+
+.navegacao_logo {
+    width: 100px;
+    height: 65px;
+    margin-left: 20px; /* Espaçamento à esquerda */
+}
+
+.navegacao {
+    display: flex;
+    align-items: center;
+    margin-right: 40px; /* Espaçamento à direita */
+    
+}
+
+.navegacao_item {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaçamento entre o ícone e o link */
+    margin-right: 30px;
+}
+
+
+.navegacao_item a{
+    text-decoration: none;
+    color: #101010bb;
+    padding: 8px;
+  
+    
+}
+
+.navegacao_item a:hover{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+a {
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+
+}
+
+/* Criando a barra com ::after */
+a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Distância da barra em relação ao texto */
+    width: 100%;
+    height: 2px; /* Espessura da barra */
+    background-color:#ffffff; /* Cor da barra */
+    transform: scaleX(0); /* Inicialmente invisível */
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out; /* Animação suave */
+}
+
+/* Efeito ao passar o mouse */
+a:hover::after {
+    transform: scaleX(1); /* Exibe a barra */
+}
+
+
+/* TEXTO DA HOME */
+section{
+    display: flex;
+    flex-direction: column;   /* coloca os article em colunas*/
+    width: 800px;
+    height: 600px;
+    
+    /* background-color: aqua; */
+    justify-content: center;
+    align-items: center;
+    padding: 0px 30px 0px 30px;  /* padding aplicado nas laterais esqueda e direita*/
+    
+}
+
+
+
+.article{
+    
+    width: 600px;
+    height: 260px;
+    /* background-color: antiquewhite; */
+    padding: 15px;
+   
+
+}
+
+.article_titulo{
+    
+    font-size: 28px;
+    padding-bottom: 30px;
+    text-align: center;
+   
+}
+
+.article_texto{
+    font-size: 18px;
+    padding-bottom: 30px;
+    line-height: 1.2;
+    text-align: center;
+
+}
+
+
+/* ICONES ALIMENTOS */
+
+.article_food{
+    display: flex;
+    width: 630px;
+    height: 155px;
+
+    background-color: #2F4050;
+    margin-top: 15px;
+    border-radius: 15px ;
+
+    justify-content: space-around;
+    align-items: center
+    
+}
+
+.article_food_texto{
+   display: flex;
+   align-items: center;
+   flex-direction: column;  /* deixa os nome das categorias dos alimentos embaixo dos icone*/
+
+   color: #ECE9E6;
+}
+
+
+
+.article_food_texto:hover{
+    background-color: #ECE9E6; 
+    border-radius: 10px;
+    box-shadow: 1px;
+    color: #AABE76;
+}
+
+
+/* CONTEUDO ASIDE IMG FUTURO CARROSEL */
+
+.aside{
+   display: flex;
+    width: 375px;
+    height: 540px;
+    padding-right: 70px;
+    margin: 30px 0px 0px 100px;
+   
+}
+
+.aside_img{
+    width: 375px;
+    height: 540px;
+    border-radius: 100% 0% 100% 0% / 21% 77% 23% 79% ;
+    border: 1px solid   ;
+    
+}
