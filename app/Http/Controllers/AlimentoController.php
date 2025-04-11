@@ -17,8 +17,10 @@ class AlimentoController extends Controller
             return view('alimentos.index', ['alimentos' => $alimentos]);
         }
 
+
      * 
      */
+    
     public function index(Request $request)
     {
         $alimentos = Alimento::when($request->filled('search'), function ($query) use ($request) {
