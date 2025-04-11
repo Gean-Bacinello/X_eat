@@ -7,20 +7,6 @@ use Illuminate\Http\Request;
 
 class AlimentoController extends Controller
 {
-    /**
-     * Lista todos alimentos ( index)
-     * 
-     * 
-     * public function index()
-        {
-            $alimentos = Alimento::paginate(5);
-            return view('alimentos.index', ['alimentos' => $alimentos]);
-        }
-
-
-     * 
-     */
-    
     public function index(Request $request)
     {
         $alimentos = Alimento::when($request->filled('search'), function ($query) use ($request) {
