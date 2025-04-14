@@ -10,16 +10,17 @@ Route::get('/', function () {
 });
 
 
-/**
- * Rotas para o Dashboard
- */
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
-
 
 /**
  * Rotas para a home
  */
 Route::get('/home', [HomeController::class, 'index'])->name('home.index');
+
+
+/**
+ * Rotas para o Dashboard
+ */
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 
 
 /**
