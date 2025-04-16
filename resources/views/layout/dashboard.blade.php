@@ -40,7 +40,7 @@
             </a>
         </li>
         <li class="item_menu {{ Route::is('pacientes.*') ? 'ativo' : '' }}">
-            <a href="#">
+            <a href="{{ route('pacientes.index')}}">
                 <span class="icon"><i class="bi bi-people-fill"></i></span>
                 <span class="txt-link">Pacientes</span>
             </a>

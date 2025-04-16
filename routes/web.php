@@ -3,6 +3,7 @@
 use App\Http\Controllers\AlimentoController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PacienteController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -34,3 +35,7 @@ Route::get('/alimentos/{id}/edit', [AlimentoController::class, 'edit'])->name('a
 Route::put('/alimentos/{id}', [AlimentoController::class, 'update'])->name('alimentos.update');
 Route::delete('/alimentos/{id}', [AlimentoController::class, 'destroy'])->name('alimentos.destroy');
 
+/**
+ * * Rotas para o CRUD de Pacientes
+ */
+Route::get('/pacientes', [PacienteController::class, 'index'])->name('pacientes.index');
