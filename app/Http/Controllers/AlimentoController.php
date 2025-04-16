@@ -60,6 +60,7 @@ class AlimentoController extends Controller
         ]);
     }
 
+    
     /**
      * Atualiza os dados do alimento no banco de dados
      */
