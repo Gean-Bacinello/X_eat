@@ -19,4 +19,12 @@ class Paciente extends Model
         'Senha',
         'Nutricionista_ID',
     ];
+
+
+public function scopeBuscar($query, $search)
+{
+        return $query->where('Nome', 'like', '%' . $search . '%')
+                     ->orWhere('Email', 'like', '%' . $search . '%');
+ }
+
 }
