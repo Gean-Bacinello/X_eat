@@ -39,3 +39,9 @@ Route::delete('/alimentos/{id}', [AlimentoController::class, 'destroy'])->name('
  * * Rotas para o CRUD de Pacientes
  */
 Route::get('/pacientes', [PacienteController::class, 'index'])->name('pacientes.index');
+Route::get('/pacientes/create', [PacienteController::class, 'create'])->name('pacientes.create');
+Route::post('/pacientes', [PacienteController::class, 'store'])->name('pacientes.store');
+Route::get('/pacientes/{id}', [PacienteController::class, 'show'])->name('pacientes.show');
+Route::get('/pacientes/{id}/edit', [PacienteController::class, 'edit'])->name('pacientes.edit');
+Route::put('/pacientes/{id}', [PacienteController::class, 'update'])->name('pacientes.update');
+Route::delete('/pacientes/{id}', [PacienteController::class, 'destroy'])->name('pacientes.destroy');
