@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Hash;
 
 class Paciente extends Model
 {
@@ -20,6 +21,12 @@ class Paciente extends Model
         'Nutricionista_ID',
     ];
 
+
+// Mutator para criptografar a senha antes de salvar no banco de dados
+public function setSenhaAttribute($value)
+{
+    $this->attributes['Senha'] = Hash::make($value);
+}
 
 public function scopeBuscar($query, $search)
 {
