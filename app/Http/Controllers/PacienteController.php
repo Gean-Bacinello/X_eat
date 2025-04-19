@@ -66,7 +66,9 @@ class PacienteController extends Controller
      */
     public function show(string $id)
     {
-        $paciente = Paciente::findOrFail($id);  //Busca a lista total de pacientes no banco
+        // $paciente = Paciente::findOrFail($id);  //Busca a lista total de pacientes no banco
+        // Busca o paciente com seu nutricionista associado usando eager loading
+        $paciente = Paciente::with('nutricionista')->findOrFail($id); 
         return view('pacientes.show', [
             'paciente' => $paciente
         ]);

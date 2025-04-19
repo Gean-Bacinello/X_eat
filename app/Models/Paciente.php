@@ -34,4 +34,10 @@ public function scopeBuscar($query, $search)
                      ->orWhere('Email', 'like', '%' . $search . '%');
  }
 
+
+public function nutricionista()
+{
+    return $this->belongsTo(Nutricionista::class, 'Nutricionista_ID');
+}
+
 }

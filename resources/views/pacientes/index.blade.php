@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container">
-  <h1 class="mb-4">Pacientes Cadastrados</h1>
+  <h1 class="mb-4 pl-3">Pacientes Cadastrados</h1>
 
   <div class="container">
     <div class="d-flex justify-content-between mb-4">

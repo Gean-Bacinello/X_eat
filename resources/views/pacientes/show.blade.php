@@ -30,12 +30,12 @@
             <input type="text" class="form-control" value="{{ $paciente->Peso }}" readonly>
         </div>
         <div class="col-md-4 mb-3">
-            <label class="form-label">Altura</label>
-            <input type="text" class="form-control" value="{{ $paciente->Altura }}" readonly>
-        </div>
-        <div class="col-md-4 mb-3">
             <label class="form-label">Email</label>
             <input type="text" class="form-control" value="{{ $paciente->Email }}" readonly>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label class="form-label">Nutricionista responsavel</label>
+          <input type="text" class="form-control" value="{{ $paciente->nutricionista->Nome ?? 'Não informado' }}" readonly>
         </div>
         </div>
         <div class="d-flex justify-content-between mt-4">
