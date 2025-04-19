@@ -13,13 +13,17 @@
 
                     <div class="row">
                         <div class="col-md-4 mb-3">
-                            <label for="Nome_Alimento" class="form-label">Nome do Alimento</label>
-                            <input type="text" class="form-control" id="Nome_Alimento" name="Nome_Alimento" required>
+                            <label for="Nome_Alimento" class="form-label"><span class="text-danger">*</span>Nome do
+                                Alimento</label>
+                            <input type="text" class="form-control" id="Nome_Alimento" name="Nome_Alimento"
+                                title="Campo obrigatorio" required>
                         </div>
 
                         <div class="col-md-4 mb-3">
-                            <label for="Grupo_Alimentar" class="form-label">Grupo Alimentar</label>
-                            <input type="text" class="form-control" id="Grupo_Alimentar" name="Grupo_Alimentar" required>
+                            <label for="Grupo_Alimentar" class="form-label"><span class="text-danger">*</span>Grupo
+                                Alimentar</label>
+                            <input type="text" class="form-control" id="Grupo_Alimentar" name="Grupo_Alimentar"
+                                title="Campo obrigatorio" required>
                         </div>
 
                         <div class="col-md-4 mb-3">
