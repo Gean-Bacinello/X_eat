@@ -7,6 +7,15 @@ use Illuminate\Http\Request;
 
 class AlimentoController extends Controller
 {
+    // ===================[ CRUD - EXIBIR ]===================
+    /**
+     * Exibe os alimentos cadastrados no banco de dados
+     * Com a função de pesquisa -> model -> Paciente.php
+     * Paginação exibindo apenas 5 alimentos por pagina 
+     *
+     * @param Request $request
+     * @return void
+     */
     public function index(Request $request)
     {
         $alimentos = Alimento::when($request->filled('search'), function ($query) use ($request) {
@@ -16,17 +25,21 @@ class AlimentoController extends Controller
         return view('alimentos.index', ['alimentos' => $alimentos]);
     }
     
-
+    // ===================[ CRUD - CRIAR ]===================
     /**
-     * Mostra o formulario de cadastro de  um alimento
+     * Rota para o metodo create
+     * mostra o formulario de cadastro de alimento
      */
     public function create()
     {
         return view('alimentos.create');
     }
 
+
+     // ===================[ CRUD - ARMAZENAR ]===================
     /**
-     * Store a newly created resource in storage.
+     * Função Responsável por enviar o formulário de cadastro
+    * armazena os dados do alimento no banco de dados 
      */
     public function store(Request $request)
     {
@@ -37,8 +50,9 @@ class AlimentoController extends Controller
         return redirect('/alimentos')->with('msg', 'Alimento cadastrado com sucesso!');
     }
 
+     // ===================[ CRUD - EXIBIR{ID} ]===================
     /**
-     *  Mostra os detalhes de um cliente especifico
+     *  Exibe as informações de um alimento especifico pelo seu ID
      */
     public function show(int $id)
     {
@@ -48,8 +62,10 @@ class AlimentoController extends Controller
         ]);
     }
 
+     // ===================[ CRUD - EDITAR ]===================
     /**
-     * Mostra o formulario de edição do Alimento
+     * captura as informações salvas do formulario 
+     * exibe as respectivas informações do alimento
      */
     public function edit(int $id)
     {
@@ -60,9 +76,10 @@ class AlimentoController extends Controller
         ]);
     }
 
-    
+    // ===================[ CRUD - ATUALIZAR ]===================
     /**
-     * Atualiza os dados do alimento no banco de dados
+     * Atualiza as informações do alimento através do formulário
+     * ultiliza o id do alimento
      */
     public function update(Request $request, int $id)
     {
@@ -72,8 +89,10 @@ class AlimentoController extends Controller
         return redirect('/alimentos')->with('msg', 'Alimento editado com sucesso!');
     }
 
+     // ===================[ CRUD - EXCLUIR ]===================
     /**
-     * Remove the specified resource from storage.
+     * Exclui as informações do aliemnto atravez do formulario
+     * ultiliza o id do alimento
      */
     public function destroy(int $id)
     {
