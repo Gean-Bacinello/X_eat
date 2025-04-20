@@ -50,14 +50,7 @@
                             <label for="Email" class="form-label"><span class="text-danger">*</span>Email</label>
                             <input type="text" class="form-control" id="Email" name="Email"
                                 value="{{ $paciente->Email }}" required>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                            <label for="Senha" class="form-label"><span class="text-danger">*</span>Senha</label>
-                            <input type="text" class="form-control" id="Senha" name="Senha"
-                                value="{{ $paciente->Senha }}" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}"
-                                title="A senha deve conter pelo menos 8 caracteres, uma letra maiúscula, uma letra minúscula e um número."
-                                required>
-                        </div>
+                        </div>  
                         <div class="col-md-4 mb-3">
                             <label for="Nutricionista" class="form-label"><span class="text-danger">*</span>Nutricionista
                                 Responsavel</label>
