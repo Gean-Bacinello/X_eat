@@ -37,7 +37,9 @@ class PacienteController extends Controller
      */
     public function create()
     {
-        return view('pacientes.create');
+        // return view('pacientes.create');
+       return view('pacientes.create');
+
     }
 
     // ===================[ CRUD - ARMAZENAR ]===================
@@ -53,7 +55,7 @@ class PacienteController extends Controller
         $paciente = $request->except('_token');
         Paciente::create($paciente);
 
-        return redirect()->route('pacientes.index')->with('msg', 'Paciente Cadastrado com sucesso!');
+        return redirect()->route('pacientes.index')->with('success', 'Paciente ccadastrado com sucesso!');
     }
 
     // ===================[ CRUD - EXIBIR{ID} ]===================
@@ -98,7 +100,7 @@ class PacienteController extends Controller
         $paciente = Paciente::find($id);
         $paciente->update($request->all());
 
-        return redirect()->route('pacientes.index')->with('msg', 'Paciente atualizado com sucesso!');
+        return redirect()->route('pacientes.index')->with('success', 'Paciente atualizado com sucesso!');
     }
 
     // ===================[ CRUD - EXCLUIR ]===================
@@ -111,6 +113,6 @@ class PacienteController extends Controller
         $paciente = Paciente::findOrFail($id);
         $paciente->delete();
 
-        return redirect()->route('pacientes.index')->with('msg', 'Paciente excluido com sucesso!');
+        return redirect()->route('pacientes.index')->with('success', 'Paciente excluido com sucesso!');
     }
 }
