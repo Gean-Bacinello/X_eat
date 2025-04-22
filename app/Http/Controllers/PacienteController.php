@@ -55,7 +55,7 @@ class PacienteController extends Controller
         $paciente = $request->except('_token');
         Paciente::create($paciente);
 
-        return redirect()->route('pacientes.index')->with('success', 'Paciente ccadastrado com sucesso!');
+        return redirect()->route('pacientes.index')->with('success', 'Paciente cadastrado com sucesso!');
     }
 
     // ===================[ CRUD - EXIBIR{ID} ]===================

@@ -4,6 +4,27 @@
 
 @section('content')
     <div class="container">
+        <div class="container">
+            @if (session('success'))
+            <div class="alert alert-success alert-dismissible fade show mt-1 shadow-sm rounded-3 d-flex align-items-center" role="alert" style="padding: 1rem 1.25rem;">
+                <i class="bi bi-check-circle-fill me-2 fs-4"></i>
+                <div class="flex-grow-1">
+                    {{ session('success') }}
+                </div>
+                <button type="button" class="btn-close ms-2" data-bs-dismiss="alert" aria-label="Fechar"></button>
+            </div>
+        @endif
+        <script>
+            setTimeout(() => {
+                const alert = document.querySelector('.alert');
+                if (alert) {
+                    alert.classList.remove('show');
+                    alert.classList.add('fade');
+                    setTimeout(() => alert.remove(), 500);
+                }
+            }, 2000); 
+        </script> 
+            
         <h1 class="mb-4">Bases de dados de alimentos</h1>
 
         <div class="d-flex justify-content-between mb-4">

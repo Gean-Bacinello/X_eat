@@ -47,7 +47,7 @@ class AlimentoController extends Controller
 
         Alimento::create($alimento);
 
-        return redirect('/alimentos')->with('msg', 'Alimento cadastrado com sucesso!');
+        return redirect()->route('alimentos.index')->with('success', 'alimento cadastrado com sucesso!');
     }
 
      // ===================[ CRUD - EXIBIR{ID} ]===================
@@ -86,7 +86,7 @@ class AlimentoController extends Controller
         $alimento = Alimento::find($id);
         $alimento->update($request->all());
 
-        return redirect('/alimentos')->with('msg', 'Alimento editado com sucesso!');
+        return redirect()->route('alimentos.index')->with('success', 'Alimento atualizado com sucesso!');
     }
 
      // ===================[ CRUD - EXCLUIR ]===================
@@ -100,6 +100,6 @@ class AlimentoController extends Controller
 
         $alimento->delete();
 
-        return redirect('/alimentos');
+        return redirect()->route('alimentos.index')->with('success', 'alimento excluido com sucesso!');
     }
 }
