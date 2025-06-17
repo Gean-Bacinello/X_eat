@@ -49,7 +49,7 @@
                 </a>
             </li>
             <li class="item_menu {{ Route::is('agenda.*') ? 'ativo' : '' }}">
-                <a href="#">
+                <a href="{{ route('agenda.index')}}">
                     <span class="icon"><i class="bi bi-card-checklist"></i></span>
                     <span class="txt-link">Agenda</span>
                 </a>

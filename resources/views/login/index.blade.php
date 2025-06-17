@@ -5,7 +5,7 @@
 
         <img class="mb-4" src="{{ asset('img/') }}" alt="" width="72" height="72">
         <h1 class="h3 mb-3 fw-normal">Área Restrita</h1>
-        <x-alert />
+        {{-- <x-alert /> --}}
 
         <form action="{{ route('login.process') }}" method="POST">
             @csrf

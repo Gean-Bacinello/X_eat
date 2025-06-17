@@ -12,14 +12,14 @@ use Illuminate\Support\Facades\Route;
 /**
  * *Rota para Login
  */
-Route::get('/', [LoginController::class, 'index'])->name('login');
+// Route::get('/', [LoginController::class, 'index'])->name('login');
 
 
 
 /**
  * *Rotas para a home
  */
-Route::get('/home', [HomeController::class, 'index'])->name('home.index');
+Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 
 /**
@@ -49,3 +49,10 @@ Route::get('/pacientes/{id}', [PacienteController::class, 'show'])->name('pacien
 Route::get('/pacientes/{id}/edit', [PacienteController::class, 'edit'])->name('pacientes.edit');
 Route::put('/pacientes/{id}', [PacienteController::class, 'update'])->name('pacientes.update');
 Route::delete('/pacientes/{id}', [PacienteController::class, 'destroy'])->name('pacientes.destroy');
+
+/**
+ * * Rotas para o CRUD de Agenda
+ */
+Route::get('/agenda', function () {
+    return view('agenda.agenda'); // Blade: resources/views/agenda/agenda.blade.php
+})->name('agenda.index');

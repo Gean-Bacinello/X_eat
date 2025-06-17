@@ -70,6 +70,7 @@
                         </div>
                     </div>
 
+                    
                     {{-- Botões --}}
                     <div class="d-flex gap-2">
                         <a href="{{ route('alimentos.edit', $alimento->ID_Alimento) }}"
@@ -78,7 +79,7 @@
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-sm btn-outline-danger"
-                                onclick="return confirm('Tem certteza que deseeja apagar')">Excluir</button>
+                                onclick="return confirm('Tem certeza que deseja apagar')">Excluir</button>
                         </form>
                     </div>
 
